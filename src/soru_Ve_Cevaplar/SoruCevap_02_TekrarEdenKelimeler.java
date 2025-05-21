@@ -22,19 +22,30 @@ public class SoruCevap_02_TekrarEdenKelimeler {
 
         System.out.println(kelimeler + "\n ");
 
-            Set<String> tekrarEdenler = new HashSet<>(); // Tekrar kelimler
-            Set<String> kontrolSeti = new HashSet<>(); // Liste kontrol
+        Set<String> tekrarEdenler = new HashSet<>(); // Tekrar kelimler
+        Set<String> kontrolSeti = new HashSet<>(); // Liste kontrol
 
-            for (String girilenKelime : kelimeler) {
-                if (!kontrolSeti.add(girilenKelime)) {
-                    tekrarEdenler.add(girilenKelime);
-                }
+        for (String girilenKelime : kelimeler) {
+            if (!kontrolSeti.add(girilenKelime)) {
+                tekrarEdenler.add(girilenKelime);
             }
-
-            System.out.println("Tekrar eden kelimeler: " + tekrarEdenler);
-
-
         }
+
+        System.out.println("Tekrar eden kelimeler: " + tekrarEdenler);
+
+        /*
+        HashSet Ne İşlem Yapar?
+        İşlem	Açıklama
+        add(E e)	Yeni öğe ekler. Eğer öğe zaten varsa eklenmez
+        remove(Object o)	Belirtilen öğeyi siler
+        contains(Object o)	Öğenin kümede olup olmadığını kontrol eder
+        clear()	Tüm öğeleri siler
+        size()	Kümedeki öğe sayısını döner
+        isEmpty()	Kümenin boş olup olmadığını kontrol eder
+        iterator()	Öğeleri döngüyle gezmek için kullanılır
+        */
+
     }
+}
 
 
